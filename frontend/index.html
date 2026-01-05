@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CM COMPANY</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="header">
+    <a href="index.html" class="logo">
+        <img src="cm ice.png" alt="Logo">
+    </a>
+
+    <input type="checkbox" id="check">
+    <label for="check" class="icons">
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <i class="bx bx-x" id="close-icon"></i>
+    </label>
+
+    <nav class="navbar">
+        <a href="index.html" style="--i:0;">Home</a>
+        <a href="about.html" style="--i:1;">About</a>
+        <a href="gallerie.html" style="--i:2;">Gallery</a>
+
+        <!-- 🔐 SERVICES PROTÉGÉ -->
+        <a href="#" onclick="goServices()" style="--i:3;">Services</a>
+
+        <!-- 🔐 LOGIN / LOGOUT -->
+        <a href="#" onclick="goLogin()" id="loginLink" style="--i:4;">Login</a>
+    </nav>
+</header>
+
+<section class="intro">
+    <p>
+        <br>Welcome to CM COMPANY.</br>
+        <br>We are passionate about</br>
+        <br>bringing the best</br>
+        <br>services to our clients!</br>
+    </p>
+</section>
+
+<footer class="footer">
+    <div class="footer-content">
+        <p>© 2024 CM COMPANY. All rights reserved.</p>
+        <p>
+            <a href="privacy-policy.html">Privacy Policy</a> |
+            <a href="terms.html">Terms of Service</a>
+        </p>
+    </div>
+</footer>
+
+<!-- ✅ SCRIPT AUTH -->
+<script>
+function goServices() {
+    const token = localStorage.getItem("token");
+    if (token) {
+        window.location.href = "services.html";
+    } else {
+        window.location.href = "login.html";
+    }
+}
+
+function goLogin() {
+    const token = localStorage.getItem("token");
+    if (token) {
+        localStorage.removeItem("token");
+        location.reload();
+    } else {
+        window.location.href = "login.html";
+    }
+}
+
+// Changer Login → Logout si connecté
+const token = localStorage.getItem("token");
+if (token) {
+    document.getElementById("loginLink").innerText = "Logout";
+}
+</script>
+
+</body>
+</html>

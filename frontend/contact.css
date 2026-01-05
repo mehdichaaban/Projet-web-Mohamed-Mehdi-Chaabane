@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body.contact-page {
+  height: 100vh;
+  background-color: #fff; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: .3rem 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  background-color: #012350; 
+}
+
+.header .logo img {
+    width: 70px; 
+    height: auto; 
+    margin-left: -130px;
+}
+
+.header .navbar a {
+  font-size: 1.25rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 8.5rem;
+}
+
+
+.contact-form-container {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  margin-top: 120px; 
+  margin-left: 500px;
+}
+
+
+.contact-form-container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333333;
+  text-align: center;
+}
+
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #555555;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333333;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #012350;
+  outline: none;
+}
+
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #012350;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #012350;
+}
+.footer {
+    background: #012350; 
+    color: #fff;
+    text-align: center; 
+    padding: 1rem 0; /
+    position: relative; 
+    width: 100%; 
+    font-size: 0.9rem; 
+}
+
+.footer a {
+    color: #ffcc00;
+    text-decoration: none; 
+    margin: 0 0.5rem; 
+}
+
+.footer a:hover {
+    text-decoration: underline; 
+}
