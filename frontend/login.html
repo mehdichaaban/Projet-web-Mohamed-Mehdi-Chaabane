@@ -66,10 +66,10 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
             throw new Error("Invalid credentials");
         }
 
-        const token = await res.text();
+        const data = await res.json();
+        const token = data.token;
 
-        // Vérification minimale JWT (3 parties séparées par 2 points)
-        if ((token.match(/\./g) || []).length !== 2) {
+        if (!token || (token.match(/\./g) || []).length !== 2) {
             throw new Error("Invalid token received");
         }
 
